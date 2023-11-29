@@ -1,0 +1,12 @@
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(3, 1/3fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  text-wrap: wrap;
+}
+
+.card {
+  display: grid;
+  align-items: start;
+}
