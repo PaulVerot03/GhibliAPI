@@ -9,7 +9,7 @@ body {
   background-image: url("paysage1-blur.jpg");
 }
 
-#searchbar { 
+#searchbar {
   display: none;
 }
 
@@ -39,10 +39,15 @@ button {
 }
 
 /*TEXTE ET ANIMATION TEXTE*/
-
+.title { /* the ghibli movies */
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 70px;
+}
 #japonais {
   font-family: "M PLUS 1p", sans-serif;
   font-size: x-large;
+  font-weight: 550;
 }
 
 .latin {
@@ -50,17 +55,35 @@ button {
 }
 
 .original {
-  margin-right: 10px;
-
+  margin: auto;
   font-family: "Noto Serif JP", serif;
 }
 
 .realisateur {
   font-size: larger;
+  margin: auto;
+  font-weight: 600;
+  color: gray;
+
 }
 
 .original:hover + .latin {
   display: block;
+  margin: auto;
+  font-weight: 400;
+}
+.titre-film {
+  margin: auto;
+}
+.annee {
+  margin: auto;
+  font-style: italic;
+  font-weight: 600;
+  color: gray;
+}
+
+.descr {
+  font-weight: 500;
 }
 
 /* .original:hover {
@@ -76,11 +99,7 @@ button {
   border-radius: 12px 12px 0px 0px;
 }
 
-.title {
-  text-align: center;
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 70px;
-}
+
 
 .headerPic {
   /* logo ghibli */

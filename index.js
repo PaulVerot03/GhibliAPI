@@ -60,6 +60,8 @@ function displayMovies(movies) {
 
     movieList.appendChild(card);
     card.appendChild(image);
+    card.appendChild(annee);
+
     card.appendChild(h1);
     card.appendChild(nomOriginal);
     card.appendChild(nomLatin);
