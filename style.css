@@ -1,12 +1,68 @@
-.movieList {
-  display: grid;
-  grid-template-columns: repeat(3, 1/3fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  text-wrap: wrap;
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Serif JP', serif;
+
+/*   font-family: 'Dosis', sans-serif;
+ */
 }
 
-.card {
+#movieList {
   display: grid;
-  align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.card > *:not(img) {
+  padding: 3px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgb(105, 105, 105);
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+  transform: translate3D(0, -2px, 0);
+}
+
+/*TEXTE ET ANIMATION TEXTE*/
+.latin {
+  display: none;
+}
+
+.original {
+  margin-right: 10px;
+
+/*   font-family: 'Noto Serif JP', serif;
+ */}
+
+.original:hover + .latin {
+  display: block;
+}
+
+/* .original:hover {
+  transition: transform .6s;
+  display: none;
+} */
+
+/*IMAGES*/
+
+.movieImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.title {
+  text-align: center;
+}
+
+.headerPic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 200px;
 }
