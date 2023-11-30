@@ -1,11 +1,20 @@
-body{
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
-  /* font-family: 'Aoboshi One', serif;
-  font-family: 'Noto Serif JP', serif; */
-/*   font-family: 'Dosis', sans-serif;
- */
+  font-family: "Roboto", sans-serif;
+  /*   font-family: 'Aoboshi One', serif;*/
+  /*   font-family: 'Noto Serif JP', serif; */
+  /*   font-family: "Dosis", sans-serif;*/
+
+  background-image: url("paysage1-blur.jpg");
+}
+
+#searchbar { 
+  display: none;
+}
+
+button {
+  display: none;
 }
 
 #movieList {
@@ -21,14 +30,21 @@ body{
   background: white;
   border-radius: 12px;
   box-shadow: 5px 5px 10px rgb(105, 105, 105);
+  text-align: center;
 }
 
 .card:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
-  transform: translate3D(0, -2px, 0);
+  transform: translate3D(0, -5px, 0);
 }
 
 /*TEXTE ET ANIMATION TEXTE*/
+
+#japonais {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: x-large;
+}
+
 .latin {
   display: none;
 }
@@ -36,8 +52,12 @@ body{
 .original {
   margin-right: 10px;
 
-/*   font-family: 'Noto Serif JP', serif;
- */}
+  font-family: "Noto Serif JP", serif;
+}
+
+.realisateur {
+  font-size: larger;
+}
 
 .original:hover + .latin {
   display: block;
@@ -58,11 +78,14 @@ body{
 
 .title {
   text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 70px;
 }
 
 .headerPic {
+  /* logo ghibli */
   display: block;
-  padding: 5px;
+  padding-bottom: 120px;
   margin-left: auto;
   margin-right: auto;
   width: auto;

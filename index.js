@@ -24,7 +24,8 @@ function displayMovies(movies) {
     card.setAttribute("class", "card");
 
     const h1 = document.createElement("h1");
-    h1.textContent = movie.title;
+    h1.textContent = movie.title ;
+    h1.setAttribute("class" , "titre-film");
 
     const image = document.createElement("img");
     image.setAttribute("src", movie.image);
@@ -32,6 +33,8 @@ function displayMovies(movies) {
 
     const nomOriginal = document.createElement("p");
     nomOriginal.setAttribute("class", "original");
+    nomOriginal.setAttribute("id", "japonais");
+
     nomOriginal.textContent = movie.original_title;
 
     const nomLatin = document.createElement("p");
@@ -41,6 +44,10 @@ function displayMovies(movies) {
     const realisateur = document.createElement("p");
     realisateur.setAttribute("class", "realisateur");
     realisateur.textContent = movie.director;
+
+    const annee = document.createElement("p");
+    annee.setAttribute("class", "annee");
+    annee.textContent = movie.release_date;
 
     const toggle = document.createElement("button");
     toggle.setAttribute("id", "boutton");
@@ -61,3 +68,19 @@ function displayMovies(movies) {
     card.appendChild(resume);
   });
 }
+
+
+function search_film() { 
+  let input = document.getElementById('searchbar').value 
+  input=input.toLowerCase(); 
+  let x = document.getElementsByClassName('titre-film'); 
+    
+  for (i = 0; i < x.length; i++) {  
+      if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+          x[i].style.display="none"; 
+      } 
+      else { 
+          x[i].style.display="list-item";                  
+      } 
+  } 
+} 
