@@ -10,8 +10,6 @@ fetch("https://ghibliapi.vercel.app/films")
     displayMovies(movies);
   });
 
-
-
 function displayMovies(movies) {
   const movieList = document.getElementById("movieList");
   //const container = document.createElement("div");
@@ -28,8 +26,7 @@ function displayMovies(movies) {
     const h1 = document.createElement("h1");
     h1.textContent = movie.title;
 
-
-    const image = document.createElement("img")
+    const image = document.createElement("img");
     image.setAttribute("src", movie.image);
     image.setAttribute("class", "movieImage");
 
@@ -45,9 +42,14 @@ function displayMovies(movies) {
     realisateur.setAttribute("class", "realisateur");
     realisateur.textContent = movie.director;
 
+    const toggle = document.createElement("button");
+    toggle.setAttribute("id", "boutton");
+
     const resume = document.createElement("p");
-    movie.description = movie.description.substring(0, 150); //faire bouger au cas ou 
+    movie.description = movie.description.substring(0, 150); //faire bouger au cas ou
+
     resume.textContent = `${movie.description}...`;
+    resume.setAttribute("class", "descr");
 
     movieList.appendChild(card);
     card.appendChild(image);
@@ -55,7 +57,7 @@ function displayMovies(movies) {
     card.appendChild(nomOriginal);
     card.appendChild(nomLatin);
     card.appendChild(realisateur);
+    card.appendChild(toggle);
     card.appendChild(resume);
-    
   });
 }
